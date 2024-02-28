@@ -1,3 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Montserrat:ital@0;1&display=swap");
+
+/* makes sizing simpler */
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+:root {
+  /*Colors*/
+  --primary-dark-cyan: hsl(158, 36%, 37%);
+  --primary-cream: hsl(30, 38%, 92%);
+  --neutral-very-dark-blue: hsl(212, 21%, 14%);
+  --neutral-dark-greyish-blue: hsl(228, 12%, 48%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --primary-dark-accent: hsl(151, 27.3%, 19.4%);
+
+  /*Typography*/
+  --font-size: 16px;
+}
+
+.layout {
+  background-color: var(--primary-cream);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Montserrat", "sans-serif";
+  grid-template-rows: 1fr 40px;
+}
+
+.cards {
+  background-color: var(--neutral-white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 50%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.item-description {
+  display: grid;
+  padding: 2.5rem;
+}
+
+.item-description p:nth-child(1) {
+  font-size: 16px;
+  letter-spacing: 0.3rem;
+}
+
+h1 {
+  line-height: 2.5rem;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+h1,
+.prices span:nth-child(1) {
+  font-family: "Fraunces", "sans-serif";
+  font-size: 2.4rem;
+}
+
+.prices span:nth-child(1) {
+  color: var(--primary-dark-cyan);
+}
+
+.description {
+  padding: 0 29px 0 0;
+}
+
+.item-description p:nth-child(1),
+.description,
+.prices span:nth-child(2) {
+  color: var(--neutral-dark-greyish-blue);
+}
+
+.prices span:nth-child(2) {
+  text-decoration: line-through;
+}
+
+.description,
+span {
+  font-size: var(--font-size);
+  line-height: 1.5rem;
+}
+
+button {
+  border: 0;
+  background-color: var(--primary-dark-cyan);
+  color: var(--neutral-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  align-self: end;
+  height: 3.3rem;
+  font-weight: 700;
+  gap: 1rem;
+}
+
+button:hover {
+  background-color: var(--primary-dark-accent);
+  cursor: pointer;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
