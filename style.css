@@ -58,6 +58,14 @@ video {
   overflow: hidden;
 }
 
+.img {
+  background-image: url("images/image-product-desktop.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 58vh;
+  margin: 0;
+}
+
 .item-description {
   display: grid;
   padding: 2.5rem;
@@ -126,6 +134,7 @@ button:hover {
   background-color: var(--primary-dark-accent);
   cursor: pointer;
 }
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -133,4 +142,68 @@ button:hover {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (width <1025px) {
+  .cards {
+    grid-template-columns: minmax(auto, 321px) 1fr;
+    width: 63%;
+  }
+  img {
+    max-width: 336px;
+  }
+
+  .item-description {
+    gap: 1rem;
+  }
+}
+@media (width < 992px) {
+  .cards {
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+  }
+
+  .img {
+    background-image: url("images/image-product-mobile.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 338px;
+    margin: 0;
+  }
+
+  @media (width < 426px) {
+    .cards {
+      min-width: 384px;
+      margin-top: 20px;
+    }
+
+    .img {
+      min-height: 268px;
+    }
+  }
+
+  @media (width < 376px) {
+    .cards {
+      min-width: 346px;
+      margin-top: 20px;
+    }
+
+    .img {
+      min-height: 242px;
+    }
+
+    .item-description {
+      padding: 23px 23px;
+    }
+  }
+
+  @media (width < 321px) {
+    .cards {
+      min-width: 300px;
+    }
+
+    .img {
+      min-height: 200px;
+    }
+  }
 }
